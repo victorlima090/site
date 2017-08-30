@@ -1,6 +1,12 @@
-<?php 
-echo 'Hello world';
-echo 'mais alguma coisa';
-echo 'fazendo uma alteraçao aki';
-
-?>
+<!DOCTYPE html>
+        <html>
+            <head>
+                <title>TODO supply a title</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+            <body>
+                <div>alguma coisa</div>
+                <div><a href="login.php">Login</a></div>
+            </body>
+        </html>     
