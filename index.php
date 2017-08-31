@@ -11,7 +11,9 @@
                 <br/>
                 <div><a href="login.php">Login</a></div>
                 <br/>
-                <div><a href="pagina1.php">Pagina 1</a></div>
+                <div><a href="cadastro.php">Cadastre-se</a></div>
+                 <br/>
+                 <div><a href="pagina1.php">Pagina1</a></div>
             </body>
         </html>
      
