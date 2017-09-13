@@ -1,6 +1,6 @@
 <?php
 define('DBNAME', 'Nafisio');
-define('DBPW', 'grunge00..');
+define('DBPW', '');
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
 ?>
