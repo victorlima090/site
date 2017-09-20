@@ -1,5 +1,5 @@
 <?php
-require_once('dbvar.php');
+require_once('../dbvar.php');
 $erro_msg="";
 if(isset($_POST['submit'])){
     if(!empty($_POST['user']) && !empty($_POST['username']) && !empty($_POST['pw'])){
@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
             $_SESSION['user']=$user;
             $_SESSION['username']=$row['username'];
             echo 'cadastro feito com sucesso';
-            $homeurl="http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/index.php';
+            $homeurl="http://".$_SERVER['HTTP_HOST'].'/Nafisio/index.php';
             header('Location:'.$homeurl);
             
             

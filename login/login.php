@@ -8,7 +8,7 @@ if(!isset($_SESSION['user'])){
     if(!isset($_COOKIE['user'])){
         if(isset($_POST['Submit'])){
             //connect to database
-            require_once ('dbvar.php');    
+            require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/dbvar.php';    
             $db= mysqli_connect(DBHOST, DBUSER, DBPW, DBNAME);
             //"clean" the variables
             $user= mysqli_real_escape_string($db,trim($_POST['user']));
@@ -25,10 +25,10 @@ if(!isset($_SESSION['user'])){
                 $_SESSION['user']=$user;
                 $_SESSION['username']=$row['username'];
                 //save in cookies
-                setcookie('user',$user,time() + 60*60*24*30);//expire in 30days            
-                setcookie('username',$row['username'],time() + 60*60*24*30);//expire in 30days
+                setcookie('user',$user,time() + 60*60*24*30,'/');//expire in 30days            
+                setcookie('username',$row['username'],time() + 60*60*24*30,'/');//expire in 30days
                 //redirect to previous page
-                echo 'the file the called me was'.$_SERVER['HTTP_REFERER'];
+                //echo 'the file the called me was'.$_SERVER['HTTP_REFERER'];
                 $url=$_SERVER['HTTP_REFERER'];
                 header('Location:'.$url);
                 exit();
@@ -47,8 +47,14 @@ if(!isset($_SESSION['user'])){
         $_SESSION['username']=$_COOKIE['username'];
         //redirect to previous page
         $url='http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.basename($_SERVER['SCRIPT_FILENAME']);
-        header('Location:'.$url);
-        exit();
+        //header('Location:'.$url);
+        //exit();
+        echo "url:$url <br>";
+        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+            echo "session is set user:".$_SESSION['user'];
+        }else{
+            echo "session is not set";
+        }
     }
     ?>
         
