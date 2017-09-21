@@ -47,14 +47,9 @@ if(!isset($_SESSION['user'])){
         $_SESSION['username']=$_COOKIE['username'];
         //redirect to previous page
         $url='http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.basename($_SERVER['SCRIPT_FILENAME']);
-        //header('Location:'.$url);
-        //exit();
-        echo "url:$url <br>";
-        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-            echo "session is set user:".$_SESSION['user'];
-        }else{
-            echo "session is not set";
-        }
+        header('Location:'.$url);
+        exit();
+        
     }
     ?>
         
