@@ -3,6 +3,9 @@
     require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/login/login.php';
     require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/dbvar.php';
     $db = mysqli_connect(DBHOST, DBUSER, DBPW, 'Nafisio2');
+    if (!$db){
+    die("<br/>Connection error: " . mysqli_connect_error());
+    }
     if(isset($_GET['submit']) && !empty($_GET['title'])){
         
         $query="INSERT INTO question VALUES('0','".$_GET['title']."','".$_GET['text']."','".$_SESSION['user']."','NOW()')";
@@ -46,15 +49,16 @@
                     </tbody>
                 </table>              
         </form>
-        <form method="get" action="<?php echo $_SERVER['PHP_SELF']?>">
-            <label>Adicionar Tópico</label>
-            <input type="text" name="title"><br/>
-            <label>Pergunta:</label>
-            <input type="textarea" name="text">
-            <input type="submit" name="submit"><br/>
+        <form method="get" action="<?php echo $_SERVER['PHP_SELF']?>">          
+            <div class="form-group">
+                <label>Adicionar Tópico</label>
+                <input type="text" class="form-control" name="title"><br/>
+                <label for="Pergunta">Pergunta:</label>
+                <textarea class="form-control" rows="5" id="pergunta"></textarea>
+                <input type="submit" name="submit"><br/>
+            </div>             
             <a href="../index.php">Home</a><br/>
-            <a href="../login/logout.php">Logout</a>
-            
+            <a href="../login/logout.php">Logout</a>            
         </form>
         </body>
     </html>

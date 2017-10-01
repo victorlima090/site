@@ -5,6 +5,9 @@ if(isset($_POST['submit'])){
     if(!empty($_POST['user']) && !empty($_POST['username']) && !empty($_POST['pw'])){
         //Connect to dabatase
         $db = mysqli_connect(DBHOST, DBUSER, DBPW, DBNAME);
+        if (!$db){
+        die("<br/>Connection error: " . mysqli_connect_error());
+        }
         //Check if user exist
         $user= mysqli_real_escape_string($db,trim($_POST['user']));
         $checkuser= "SELECT * FROM users WHERE user='$user'";

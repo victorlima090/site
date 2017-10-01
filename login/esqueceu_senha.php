@@ -1,5 +1,5 @@
 <?php
-include_once 'dbvar.php';
+require_once 'dbvar.php';
 /*
  *  $to = "recipient@example.com";
  $subject = "Password";
@@ -13,6 +13,9 @@ include_once 'dbvar.php';
 $msg="";
 if(isset($_POST['submit'])){
     $db= mysqli_connect(DBHOST, DBUSER, DBPW, DBNAME);
+    if (!$db){
+        die("<br/>Connection error: " . mysqli_connect_error());
+    }
     $user= mysqli_real_escape_string($db,trim($_POST['user']));
     $query="SELECT pw FROM users WHERE user='$user'";
     $data= mysqli_query($db, $query);

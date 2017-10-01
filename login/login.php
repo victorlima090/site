@@ -5,17 +5,20 @@ $error_msg="";
 session_start();
 //Check Session and Cookie is user is logged in
 if(!isset($_SESSION['user'])){
-    if(!isset($_COOKIE['user'])){
-        if(isset($_POST['Submit'])){
-            //connect to database
-            require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/dbvar.php';    
+    if(!isset($_COOKIE['user'])){      
+        if(isset($_POST['Submit'])){               
+            include $_SERVER['DOCUMENT_ROOT'].'/Nafisio/dbvar.php';        
             $db= mysqli_connect(DBHOST, DBUSER, DBPW, DBNAME);
             //"clean" the variables
+            if (!$db)
+            {
+            die("<br/>Connection error: " . mysqli_connect_error());
+            }
             $user= mysqli_real_escape_string($db,trim($_POST['user']));
-            $pw= mysqli_real_escape_string($db,trim($_POST['pw']));
+            $pw= mysqli_real_escape_string($db,trim($_POST['pw']));                  
             //send query to serve
             //USE PASSWORD() FUNCTION INSTEAD OF SHA()(testar sem isso)
-            if(!empty($user) && !empty($pw)){
+            if(!empty($user) && !empty($pw)){           
             $query="SELECT * FROM users WHERE user='$user' AND pw='$pw';";
             $data= mysqli_query($db, $query);
             //check answer
@@ -27,30 +30,29 @@ if(!isset($_SESSION['user'])){
                 //save in cookies
                 setcookie('user',$user,time() + 60*60*24*30,'/');//expire in 30days            
                 setcookie('username',$row['username'],time() + 60*60*24*30,'/');//expire in 30days
-                //redirect to previous page
-                //echo 'the file the called me was'.$_SERVER['HTTP_REFERER'];
-                $url=$_SERVER['HTTP_REFERER'];
+                //redirect to previous page               
+                $url=$_SERVER['HTTP_REFERER'];               
                 header('Location:'.$url);
                 exit();
             }
             else{
-                $error_msg="Usário/Senha Incorretos";
+                $error_msg="Usário/Senha Incorretos";               
             }
             }
-            else{
-                $error_msg="Por favor preencher todos os campos";
+            else{                
+                $error_msg="Por favor preencher todos os campos";               
             }
 
         }
     }else{
         $_SESSION['user']=$_COOKIE['user'];
         $_SESSION['username']=$_COOKIE['username'];
-        //redirect to previous page
+        //redirect to previous page        
         $url='http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.basename($_SERVER['SCRIPT_FILENAME']);
         header('Location:'.$url);
         exit();
         
-    }
+    }   
     ?>
         
     <!DOCTYPE html>
@@ -62,7 +64,7 @@ if(!isset($_SESSION['user'])){
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
             </head>
             <body>
-                <h2>Bem Vindo a Nafisio</h2>                
+                <h2>Bem Vindo a Nafisio</h2>                     
                 <?php if(empty($_SESSION['user'])){
                     echo "$error_msg";                
                 ?>
@@ -80,13 +82,11 @@ if(!isset($_SESSION['user'])){
                 else{
                     echo 'Login feito com sucesso';
                     echo '<a href="pagina1.php">Pagina1</a>';
-                }
+                }               
                 ?>
             </body>
         </html>
             <?php
-    
-exit();}
-
-?>
+exit();
+}
            

@@ -10,6 +10,11 @@
             <body>
                 <h2>Bem vindo a Nafisio HomePage</h2>
                 <br/>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
                 <div><a href="login/login2.php">Login</a></div>
                 <br/>
                 <div><a href="login/cadastro.php">Cadastre-se</a></div>

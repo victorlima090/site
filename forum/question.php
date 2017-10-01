@@ -3,6 +3,9 @@
     require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/login/login.php';
     require_once $_SERVER['DOCUMENT_ROOT'].'/Nafisio/dbvar.php';
     $db = mysqli_connect(DBHOST, DBUSER, DBPW, 'Nafisio2');
+    if (!$db){
+        die("<br/>Connection error: " . mysqli_connect_error());
+    }
     
     if(isset($_GET['id'])){
         $_SESSION['id_question']=$_GET['id'];
