@@ -1,0 +1,186 @@
+@charset "UTF-8";
+body {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #F3F3F3;
+	font-style: normal;
+	font-weight: 300;
+}
+header {
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background-image: url(images/header-banner.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#container {
+	max-width: 60em;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background-color: #F3F3F3;
+	background-image: url(images/home-bg.png);
+}
+img {
+
+margin: 20px auto 0 auto; /*centers img*/ padding: 0;
+border: solid #C96B52 1px;
+display: block; /*img behaves like block*/
+	
+}
+p {
+	font-size: 1em;
+	line-height: 1.7em;
+	padding-top: 0px;
+	padding-right: 30px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	bottom: auto;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.main-nav {
+	overflow: hidden;
+	width: auto;
+}
+
+#pageNavigation {
+	/*background: #CCC;*/
+	width: 55%;
+	float: right;
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#pageNavigation li {
+	line-height: 2em;
+	font-size: 1em;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	width: auto;
+	display: inline;
+	padding: 0 1.5em;
+}
+#pageNavigation li:last-child {
+	padding-right: .5em;
+}
+#pageNavigation li a {
+	font-size: 1em;
+	/*color: #360;*/
+	color: #dae2e3;
+	text-decoration: none;
+}
+#pageNavigation li a:hover, a:focus {
+	color: #333;
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	/*color: #360;*/
+	color:#dae2e3;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+.footer {
+	background-color: #324555;
+	padding: 0;
+}
+.footer p {
+	font-size: .8em;
+	color: #8eb8ce;
+	padding: .2em 0 .2em 15px;
+}
+header img {
+	border: 0;
+	margin-top: 0px;
+}
+.header-banner {
+	max-width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.flex-holder {
+       padding-top: 1.5em;
+     /* We first create a flex layout context */
+     display: flex;
+     /* Then we define the flow direction and if we allow the items to
+   wrap
+      * Remember this is shorthand for:
+      * flex-direction: row;
+      * flex-wrap: wrap;
+      */
+     flex-flow: row wrap;
+     /* Then we define how is distributed the remaining space */
+     justify-content: space-around;
+}
+flex-holder li {
+       width: 300px;
+       height: 230px;
+       margin: 0 0 30px 0;
+       padding: 0
+}
+.flex-holder li a, .flex-holder li a:visited
+   {
+       display: block
+   }
+.flex-holder p {
+padding: .5em 0 0 0; 
+       text-align: center;
+}
+.flex-holder img {
+margin: 0; 
+   }
+
+@media screen and (min-width:768px){
+h1 {
+	width: 66%;
+	float: left;
+	margin-top: .5em;
+    padding-bottom: 9em; 
+}
+
+header {
+	overflow: hidden;
+}
+ header img {
+      width: 22.375%;
+      float: right;
+      margin: 1.5em 0 0 0;
+      padding: 0 1.75em 0 0;
+}
+h2 {
+	padding-top: 24px;
+}
+img {
+	float: left;
+	margin: 30px 20px 10px 30px
+}
+.header-banner {
+	max-width: 60em;
+}
