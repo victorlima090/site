@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body{
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+        
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
@@ -112,6 +113,9 @@ a:hover {
 }
 
 .footer {
+        position:absolute;
+        bottom:0;
+        width:100%;
 	background-color: #324555;
 	padding: 0;
 }
