@@ -9,48 +9,56 @@ body{
 	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-	background-color: blueviolet;
+	
 	font-style: normal;
 	font-weight: 300;
-        background-repeat: no-repeat;
-	background-size: cover;
-        background-image: url('images/bgfull.jpg');
+        background-color: #8eb8ce;
 }
-header{
-        position: fixed;
-        top:0;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 15px;
-	padding-left: 0px;
-	background-image: url(images/header-banner.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-        overflow: hidden;
+#menu-left{
+    float: left;
+    overflow: hidden;
+    overflow-y: hidden;
+    list-style: none;
+}
+#menu-left img{
+    width: 70px;
+    height: 70px;
+    border: none;
+}
+#menu-right{
+    float: right ;
+    text-align: left;
+    margin: 40px auto;
+    padding: 0;
+    width: 30%;
+    height: 200px;
+    color:yellow;
+}
+#menu-right label,input{
+    
+    margin:20px 0;
+    padding: 10px 0;
 }
 #container{
-    
+        
         overflow: hidden;
         width: 100%;
       	max-width: 100%;        
-	margin:0 ;
+	margin-bottom: 10px;
+        
         padding: 0;
         float:right;
 	/*background-color: #F3F3F3;*/
-	background-image: url(images/header-banner.png);
+	background-image: url(../images/header-banner.png);
 }
-ul {
+#navbar ul {
    list-style: none;
    width: 10%;
    float:right ;
    display: block;
    overflow: hidden;
 }
-ul li{
+#navbar ul li{
     overflow:hidden;
     padding: 0 10px;
     float:right;
@@ -102,7 +110,7 @@ ul li{
 img {
 
 margin: 20px auto 0 auto; /*centers img*/ padding: 0;
-
+border: solid #C96B52 1px;
 display: block; /*img behaves like block*/
 	
 }
@@ -121,23 +129,24 @@ p{
 	margin-bottom: 0px;
 }
 
-.main-nav {
-	overflow: hidden;
-	width: auto;
+.login_container{
+    display: inline-block;
+    margin:20px 40px ;
+    width: 700px;
+    height: 400px;
+    max-height: 400px;
+    padding:0;
+    background-image: url("images/conteiner-box.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    background-color: gray;
+    list-style: none;
 }
 
-#pageNavigation {
-	/*background: #CCC;*/
-        
-	width: 85%;        
-	float: right;
-	margin: 0 auto;
-	padding: 0;
-        text-align: center;
-	list-style: none;
-        background-color:green;
-        
-}
+
+
+
 #login{
     background-image: url('images/icon-acessar.png');
     display: block;
@@ -187,27 +196,7 @@ p{
     width: 112px;
     height: 117px;
 }
-#pageNavigation li {
-	line-height: 2em;
-	font-size: 1em;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	width: auto;
-	display: inline;
-	padding: 0 1.5em;
-}
-#pageNavigation li:last-child {
-	padding-right: .5em;
-}
-#pageNavigation li a {
-	font-size: 1em;
-	/*color: #360;*/
-	color: #dae2e3;
-	text-decoration: none;
-}
-#pageNavigation li a:hover, a:focus {
-	color: #333;
-	text-decoration: none;
-}
+
 a {
 	text-decoration: none;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
