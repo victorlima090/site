@@ -17,7 +17,17 @@ body{
         background-repeat: no-repeat;
 	background-size: cover;
 }
-
+#white-box{
+        width: 350px;
+    height: 534px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    float: left;
+    margin: 0 auto;
+    margin-left: 100px;
+    padding: 0;
+    text-align: center;
+}
 #container{
     
         overflow: hidden;
@@ -285,9 +295,28 @@ margin: 0;
     color:#2f524c;
 
 }
+#logo-white-box {
+width: 60%;
 
 
-@media screen and (min-width:768px){
+}
+#white-box-quem-somos{
+    width: 350px;
+    height: 1200px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    display: block;
+    margin: 10px auto;
+   
+    padding: 0;
+    text-align: center;
+    
+}
+#white-box-quem-somos p{
+    
+}
+
+@media screen and (min-width:767px){
 h1 {
 	width: 66%;
 	float: left;
@@ -307,12 +336,11 @@ header {
 h2 {
 	padding-top: 24px;
 }
-img {
-	float: left;
-	margin: 30px 20px 10px 30px
-}
+
 .header-banner {
 	max-width: 60em;
 }
 }
+
+
 
