@@ -1,6 +1,5 @@
 @charset "UTF-8";
-body{
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+body{font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
@@ -9,30 +8,62 @@ body{
 	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-	
+	text-align: center;
 	font-style: normal;
 	font-weight: 300;
-        background-color: #8eb8ce;
+
+ 
+        background-repeat: no-repeat;
+	background-size: cover;
+        background-image: url('images/header-banner.png.jpg')
 }
 #menu-left{
-    float: left;
+    height: 100%;
+    margin: 10px 0;
+    
+   float: left;
     overflow: hidden;
     overflow-y: hidden;
     list-style: none;
 }
 #menu-left img{
-    width: 70px;
+    
+    width: 77px;
     height: 70px;
     border: none;
+    margin: 45px 0;
 }
 #menu-right{
-    float: right ;
+   float: right;
     text-align: left;
-    margin: 40px auto;
+    margin: 0;
     padding: 0;
-    width: 30%;
-    height: 200px;
+    width: 222px;
+    height: 100%;
     color:yellow;
+}
+
+#center{
+    width: 350px;
+    height: 534px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    float: left;
+    margin: 0 auto;
+    margin-left: 100px;
+    padding: 0;
+    text-align: center;
+}
+#icon-center {
+    width: 350px;
+    height: 514px;
+}
+
+#cadastrar-icon {
+width: 100px;
+height: 100px;
+margin: 40px;
+float: none;
 }
 #menu-right label,input{
     
@@ -40,16 +71,18 @@ body{
     padding: 10px 0;
 }
 #container{
-        
+    
         overflow: hidden;
         width: 100%;
       	max-width: 100%;        
-	margin-bottom: 10px;
-        
+	margin:0 ;
+        margin-bottom: 15px;
+        height: 70px;
+        margin-top: 10px;
         padding: 0;
-        float:right;
+        float:none;
 	/*background-color: #F3F3F3;*/
-	background-image: url(../images/header-banner.png);
+	
 }
 #navbar ul {
    list-style: none;
@@ -64,29 +97,31 @@ body{
     float:right;
 }
 #navbar{
+   text-align: center;
         position: static;
-        float:right;
-        width: auto;
+        width: 622px;
         height:50px;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 20px 10px ;
+        
+	padding: 20px 0 ;
+        
 	overflow: hidden;
 }
 #navbar li{
-        overflow: hidden;
-	line-height: 2em;
+           overflow: hidden;
+	line-height: 1.8em;
 	font-size: 1em;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	width: auto;
 	display: inline;
-	padding: 0 1.5em;
+	padding: 0 0.25em;
 }
 #navbar li:last-child {
 	padding-right: .5em;
 }
 #navbar li a {
-	font-size: 1em;
+	font-size: 0.91em;
 	/*color: #360;*/
 	color: #dae2e3;
 	text-decoration: none;
@@ -97,23 +132,14 @@ body{
 }
 #container .header-banner{
         
-        
-        position: static;
-        float:right;
-        width: 100%;
-        height:50px;
-	max-width: 100%;
-	margin: 0 ;
-	padding: 10px 10px ;
+
+        text-align: center;
+        width: 622px;
+	margin: 0 auto;
+	padding: 0;
 	overflow: hidden;
 }
-img {
 
-margin: 20px auto 0 auto; /*centers img*/ padding: 0;
-border: solid #C96B52 1px;
-display: block; /*img behaves like block*/
-	
-}
 p{
         color:blue;
 	font-size: 1em;
@@ -130,18 +156,16 @@ p{
 }
 
 .login_container{
-    display: inline-block;
-    margin:20px 40px ;
-    width: 700px;
-    height: 400px;
-    max-height: 400px;
+    float: none;        
+    margin:0 auto  ;
+    width: 825px;
+    height: 514px;    
     padding:0;
-    background-image: url("images/conteiner-box.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-origin: content-box;
-    background-color: gray;
+    background-color: #22435c;
+    
     list-style: none;
+    
 }
 
 
@@ -173,10 +197,10 @@ p{
 }
 #logo{
     border: none;
-    position: absolute;
-    top: 11%;
-    width:813px;
-    height: 188px;
+    width:350px;
+    height: 534px;
+    opacity: 0.6;
+    background-color:#ffffff;
     
 }
 #welcome{
@@ -259,7 +283,26 @@ margin: 0;
 	
 }
 
-@media screen and (min-width:768px){
+form input{
+    width: 200px;
+    height:20px;
+    background-color: #b4d1da;
+}
+#submit-box{
+    width: 55px;
+    height: 25px;
+    font-size: 8pt;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    text-align: center;
+    vertical-align: center;
+    float: right;
+    
+}
+
+
+@media screen and (min-width:767px){
 h1 {
 	width: 66%;
 	float: left;
@@ -279,11 +322,11 @@ header {
 h2 {
 	padding-top: 24px;
 }
-img {
-	float: left;
-	margin: 30px 20px 10px 30px
-}
+
 .header-banner {
 	max-width: 60em;
 }
 }
+
+
+
