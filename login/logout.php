@@ -19,6 +19,6 @@ if (isset($_COOKIE['user'])){
 }else{
     echo "cookie is not set";
 }
-$homeurl='http://'.$_SERVER['HTTP_HOST'].dirname(dirname($_SERVER['PHP_SELF'])).'/index.php';
+$homeurl='http://'.$_SERVER['HTTP_HOST'].dirname(dirname($_SERVER['PHP_SELF'])).'/index.html';
 header('Location:'.$homeurl);
 exit();
