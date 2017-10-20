@@ -1,21 +1,3 @@
-<?php 
-$msg="incio";
-$target=$_SERVER['DOCUMENT_ROOT']."/Nafisio/forum/uploaded_files/";
-if(isset($_POST['submit'])){
-        
-        $target=$target.$_FILES['pdf_file']['name'];
-        if (move_uploaded_file($_FILES['pdf_file']['tmp_name'], $target)){
-            $msg="movido com sucesso";
-        
-        }else{
-            $msg="alguma coisa deu errada,tmp_name:".$_FILES['pdf_file']['tmp_name']." target:".$target." size:".$_FILES['pdf_file']['size'];
-          
-        }
-}
-
-?>
-
-
 <!DOCTYPE html>
 
 <html>
@@ -38,11 +20,8 @@ if(isset($_POST['submit'])){
             </div>            
         </div>
         <!-- enctype para dar upload, e necessario completar o action -->
-        <?php echo "</br>".$msg; ?>
-        <form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-            <input type="file" name="pdf_file" id="pdf_file">
-            <input type="submit" name="submit" id="submit">
-            <img src="<?php echo $target ?>" style="width: 70px;height: 70px;" alt="target image"> 
+        <form enctype="multipart/form-data" action="" method="post">
+            <input type="file" name="pdf_file">
             
         </form>
         
