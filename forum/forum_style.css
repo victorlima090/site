@@ -5,7 +5,94 @@ body{
     background-image:url('images/forum-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 768px;
     
+    
+}
+#menu-left{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 86px;
+    height: 732px;
+    background-color: #066571;
+    color:#ffffff;
+    font-size: 10pt;
+    font-family: Futura Medium;
+    text-align: center;
+    font-weight: bold;
+}
+#menu-left ul{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu-left ul li{
+    float: inside;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-left ul img{
+    width: 41px;
+    height: 43px;
+    margin: 10px 20px;
+    padding: 0 ;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+#menu-left p{
+    margin:0;
+    padding: 0;
+}
+#header{
+    width: 938px;
+    max-width: 100%;
+    height: 83px;
+    margin: 0;
+    margin-left: 86px;
+    padding: 0;
+}
+#logout{
+    margin: 10px;
+    float: right;
+    font-size: 12pt;
+    text-align: center;
+    color: #066571;
+    width: 65px;
+}
+#logout img{
+    width: 65px;
+    height: 65px;
+}
+#search-bar{
+    float: right ;
+    width: 150px;
+    height: 20px;
+    margin: 30px 40px;
+}
+.header-icon{
+    float: right;
+    margin: 10px;
+    font-size: 12pt;
+    text-align: center;
+    color: #066571;
+    width: 65px;
+    
+}
+.header-icon img{
+    
+    width: 65px;
+    height: 65px;
+}
+#title{
+    font-size: 40pt;
+    float: left;
+    color: #066571;
+    height: 40px;
+    margin: 15px 10px;
     
 }
 a {
@@ -20,16 +107,18 @@ a:hover {
 }
 
 .footer {
-        position:absolute;
+        position:fixed;
         bottom:0;
         width:100%;
 	background-color: #324555;
 	padding: 0;
+    height: 20px;
 }
 .footer p {
 	font-size: .8em;
 	color: #8eb8ce;
-	padding: .2em 0 .2em 15px;
+padding: .2em 0 .2em 15px;
+    margin: 0;
 }
 
 .flex-holder {

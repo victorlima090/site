@@ -28,10 +28,45 @@ if(isset($_POST['submit'])){
     </head>
     <body>
         
-        <div >
-               
+        <div id="menu-left">
+            <ul >
+                <li><img style="margin:0;width: 80px;height: 83px;float: none;" src="images/symbol-icon-nafisio.png" alt="nafisio icon"></li>
+                <li>  <img src="images/tutoria-icon.png" alt="tutoria icon"/><p>Tutoria</p> </li>
+                
+                <li style="background-color: #3dd3d3;opacity: 0.55;"> <img src="images/forum-icon.png" alt="forum icon"><p>Forum</p></li>                
+                
+                <li> <img src="images/tarefas-icon.png" alt="tarefas icon"><p>Tarefas</p> </li>
+                
+                <li> <img src="images/publicacoes-icon.png" alt="publicaçoes"><p>Publicações</p></li>
+                <li> <img src="images/calendario.png" alt="calendario icon"><p>Calendário</p></li>
+                <li><img src="images/inbox-icon.png" alt="inbox icon"><p>Inbox</p></li>
+                <li><img src="images/ajuda-icon.png" alt="ajuda icon"><p>Ajuda</p></li>
+                
+            </ul>               
         </div>
-        
+        <div id="header">
+            <a href="../login/logout.php"><div id="logout"><img src="images/sair-icon.png" alt="sair icon">Sair</div></a>
+            <div id="search-bar"> 
+                <input type="text" name="search-bar" placeholder="" >
+            </div>
+            <div class="header-icon">
+                <img src="images/admin-icon.png" alt="admin icon"/>Admin
+            </div>
+            
+            <div class="header-icon">
+                <img src="images/arquivos-icon.png" alt=""/>Arquivos
+            </div>
+            
+            <div class="header-icon">
+                <img src="images/minhaconta-icon.png" alt=""/>Minha Conta
+            </div>
+            <div id="title">Fórum</div>
+            
+            
+        </div>
+        <footer class="footer">
+            <p> &copy; 2017 NAFISIO	</p>
+         </footer>
     </body>
 </html>
 
