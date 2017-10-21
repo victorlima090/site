@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="cadastro_style.css" rel="stylesheet" type="text/css">
+        <link href="/Nafisio/css/cadastro_style.css" rel="stylesheet" type="text/css">
     </head>
         <!-- Header -->
         <body>
@@ -57,9 +57,9 @@ if(isset($_POST['submit'])){
         
         <div class="login_container">
             <ul id="menu-left">
-                <li><img src="images/yellow-user-box-icon.png" alt="user"></li>
-                <li><img src="images/signup-lateral-button-active.png"></li>
-                <li><img src="images/yellow-question-mark-icon-active.png"></li>
+                <li><img src="images_login/yellow-user-box-icon.png" alt="user"></li>
+                <li><img src="images_login/signup-lateral-button-active.png"></li>
+                <li><img src="images_login/yellow-question-mark-icon-active.png"></li>
             </ul>
             <div id="center">
                 <img id="icon-center"  src="../images/Logo.png" alt=""/> 

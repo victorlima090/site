@@ -61,7 +61,7 @@ if(!isset($_SESSION['user'])){
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="login_style.css" rel="stylesheet" type="text/css">
+        <link href="/Nafisio/css/login_style.css" rel="stylesheet" type="text/css">
     </head>
         <!-- Header -->
         <body>
@@ -80,12 +80,12 @@ if(!isset($_SESSION['user'])){
         
         <div class="login_container">
             <ul id="menu-left">
-                <li><img src="images/yellow-user-box-icon.png" alt="user"></li>
-                <li><img src="images/signup-lateral-button-active.png"></li>
-                <li><img src="images/yellow-question-mark-icon-active.png"></li>
+                <li><img src="/Nafisio/images/images_login/yellow-user-box-icon.png" alt="user"></li>
+                <li><img src="/Nafisio/images/images_login/signup-lateral-button-active.png"></li>
+                <li><img src="/Nafisio/images/images_login/yellow-question-mark-icon-active.png"></li>
             </ul>
             <div id="center">
-                <img id="icon-center"  src="../images/Logo.png" alt=""/> 
+                <img id="icon-center"  src="/Nafisio/images/images_login/Logo.png" alt=""/> 
             </div>
             <div id="menu-right">
                 
@@ -99,7 +99,7 @@ if(!isset($_SESSION['user'])){
                     <input id="submit-box" type="submit" name="Submit" value="Entrar" >
                     <p style="color:yellow; font-size:10pt;float: left;padding: 0; font-style: italic;">
                         Esqueceu sua senha?</p>
-                    <a href="cadastro.php"><img id="cadastrar-icon" src="images/cadastrar-icon_1.png" alt=""/></a>
+                    <a href="cadastro.php"><img id="cadastrar-icon" src="/Nafisio/images/images_login/cadastrar-icon_1.png" alt=""/></a>
                     
                 </form>
                     <?php }                             

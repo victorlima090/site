@@ -15,7 +15,7 @@ body{font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, san
  
         background-repeat: no-repeat;
 	background-size: cover;
-        background-image: url('images/header-banner.png.jpg')
+        background-image: url('/Nafisio/images/images_login/header-banner.png.jpg')
 }
 #menu-left{
     height: 100%;
@@ -37,6 +37,7 @@ body{font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, san
    float: right;
     text-align: left;
     margin: 0;
+    margin-top:10px;
     padding: 0;
     width: 222px;
     height: 100%;
@@ -67,7 +68,7 @@ float: none;
 }
 #menu-right label,input{
     
-    margin:20px 0;
+    margin:10px 0;
     padding: 10px 0;
 }
 #container{
@@ -96,40 +97,7 @@ float: none;
     padding: 0 10px;
     float:right;
 }
-#navbar{
-   text-align: center;
-        position: static;
-        width: 622px;
-        height:50px;
-	max-width: 100%;
-	margin: 0 auto;
-        
-	padding: 20px 0 ;
-        
-	overflow: hidden;
-}
-#navbar li{
-           overflow: hidden;
-	line-height: 1.8em;
-	font-size: 1em;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	width: auto;
-	display: inline;
-	padding: 0 0.25em;
-}
-#navbar li:last-child {
-	padding-right: .5em;
-}
-#navbar li a {
-	font-size: 0.91em;
-	/*color: #360;*/
-	color: #dae2e3;
-	text-decoration: none;
-}
-#navbar li a:hover, a:focus {
-	color: #333;
-	text-decoration: none;
-}
+
 #container .header-banner{
         
 
@@ -175,7 +143,7 @@ p{
 
 
 #login{
-    background-image: url('images/icon-acessar.png');
+    background-image: url('/Nafisio/images/images_login/icon-acessar.png');
     display: block;
     width: 981px;
   height: 180px;
@@ -224,6 +192,28 @@ p{
     height: 117px;
 }
 
+form input{
+    width: 200px;
+    height:20px;
+    background-color: #b4d1da;
+    
+    
+}
+#submit-box{
+    width: 200px;
+    height: 40px;
+    font-size: 14pt;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    text-align: center;
+    vertical-align: center;
+    float: right;
+    border-style: groove;
+    border-radius: 5px;
+    
+}
+
 a {
 	text-decoration: none;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
@@ -235,21 +225,39 @@ a:hover {
 	text-decoration: underline;
 }
 
-.footer {
-        position:absolute;
-        bottom:0;
-        width:100%;
-	background-color: #324555;
-	padding: 0;
+#navbar{
+   text-align: center;
+        position: static;
+        width: 622px;
+        height:50px;
+	max-width: 100%;
+	margin: 0 auto;
+        
+	padding: 20px 0 ;
+        
+	overflow: hidden;
 }
-.footer p {
-	font-size: .8em;
-	color: #8eb8ce;
-	padding: .2em 0 .2em 15px;
+#navbar li{
+           overflow: hidden;
+	line-height: 1.8em;
+	font-size: 1em;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	width: auto;
+	display: inline;
+	padding: 0 0.25em;
 }
-header img {
-	border: 0;
-	margin-top: 0px;
+#navbar li:last-child {
+	padding-right: .5em;
+}
+#navbar li a {
+	font-size: 0.91em;
+	/*color: #360;*/
+	color: #dae2e3;
+	text-decoration: none;
+}
+#navbar li a:hover, a:focus {
+	color: #333;
+	text-decoration: none;
 }
 .flex-holder {
        padding-top: 1.5em;
@@ -286,25 +294,22 @@ margin: 0;
 	
 }
 
-form input{
-    width: 200px;
-    height:20px;
-    background-color: #b4d1da;
+.footer {
+        position:absolute;
+        bottom:0;
+        width:100%;
+	background-color: #324555;
+	padding: 0;
 }
-#submit-box{
-    width: 55px;
-    height: 25px;
-    font-size: 8pt;
-    padding: 0;
-    margin: 0;
-    margin-right: 16px;
-    text-align: center;
-    vertical-align: center;
-    float: right;
-    
+.footer p {
+	font-size: .8em;
+	color: #8eb8ce;
+	padding: .2em 0 .2em 15px;
 }
-
-
+header img {
+	border: 0;
+	margin-top: 0px;
+}
 @media screen and (min-width:767px){
 h1 {
 	width: 66%;

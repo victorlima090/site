@@ -61,7 +61,7 @@ if(!isset($_SESSION['user'])){
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="login_style.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_SERVER['DOCUMENT_ROOT'].'/Nafisio/login/login-style.css'?>" rel="stylesheet" type="text/css">
     </head>
         <!-- Header -->
         <body>
