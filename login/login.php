@@ -27,6 +27,7 @@ if(!isset($_SESSION['user'])){
                 //save in session
                 $_SESSION['user']=$user;
                 $_SESSION['username']=$row['username'];
+                $username=$row['username'];
                 //save in cookies
                 setcookie('user',$user,time() + 60*60*24*30,'/');//expire in 30days            
                 setcookie('username',$row['username'],time() + 60*60*24*30,'/');//expire in 30days
@@ -46,7 +47,9 @@ if(!isset($_SESSION['user'])){
         }
     }else{
         $_SESSION['user']=$_COOKIE['user'];
+        $user=$_COOKIE['user'];
         $_SESSION['username']=$_COOKIE['username'];
+        $username=$_COOKIE['username'];
         //redirect to previous page        
         $url='http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.basename($_SERVER['SCRIPT_FILENAME']);
         header('Location:'.$url);

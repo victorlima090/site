@@ -48,6 +48,99 @@ body{
     margin:0;
     padding: 0;
 }
+#form, .form-header, #form-footer{
+    margin: 0 auto;
+    float: left;
+    width: 744px;
+    height: 518px;
+}
+#form-header{
+    height: 46.6px;
+}
+#form-body, #form-body textarea{
+    margin:0;
+    padding: 0;
+    width: 742px;
+    height: 342px;
+    background-color: transparent;
+    color:#4f9ab3;
+    font-size: 14pt;
+    
+        
+}
+#form-footer{
+    height: 46.6px;
+}
+.form-footer-icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px;
+    
+    
+}
+.upload_file > input{
+    display: none;
+}
+.upload_file img{
+    cursor:pointer;
+}
+
+#upload_link{
+    text-decoration:none;
+}
+#titulo-input{
+    border: none;
+    color:#0f7397;
+    font-size: 14pt;
+    margin: 0;
+    float: left;
+    width: 100px;
+    float: left;
+    background-color: transparent;
+}
+#descricao-input{
+    border: none;
+    font-size: 8pt;
+    margin: 0;
+    width: 120.8px;
+    height: 13px;
+    float: left;
+    background-color: transparent;
+}
+#input-text-box{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+}
+.form-header-left {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    text-align: center;
+    height: 46.6px;
+    float: right;
+    font-size: 8pt;
+    color: #4f9ab3;
+}
+.form-header-left img{
+    width: 23.5px;
+    height: 17.5px;
+}
+#publicar-button{
+    width: 23.5px;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+    background-image:url('../forum/images/publicar.png'); 
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+        
+}
 #header,#topic,#topic-table{
     border: none;
     width: 91.6%;/*938px;*/
@@ -55,6 +148,13 @@ body{
     height: 83px;
     margin: 0;
     margin-left: 86px;
+    padding: 10px 15px;
+}
+#user-img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 0;
     padding: 10px 15px;
 }
 #header h1{
@@ -177,23 +277,13 @@ table{
     
 }
 
-.tr1,.tr2{
-    
-}
-.tr1{
-}
-.tr2{
-    
-}
+
 a{
-    margin: 0;
-    padding: 0;
-    float: none;
     text-decoration: none;
 }
 a:hover {
 	
-	text-decoration: underline;
+	
 }
 
 .footer {

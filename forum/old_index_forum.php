@@ -1,6 +1,9 @@
-<?php/* COMO VERIFICAR O NOME DOS ARQUIVO E MUDAR ELE PRA PASTA QUE A GNT QUER
+<?php/* 
+ *ARQUIVO QUE TA FUNCIONANDO BEM MAS O STYLE NAO TAVA PRONTO DIGAMOS ASSIM 
+ * 
+ * COMO VERIFICAR O NOME DOS ARQUIVO E MUDAR ELE PRA PASTA QUE A GNT QUER
 $msg="incio";
-
+$target=$_SERVER['DOCUMENT_ROOT']."/Nafisio/forum/uploaded_files/";
 if(isset($_POST['submit'])){
         $file_name=$_FILES['pdf_file']['name'];
         $target=$target.$file_name;
@@ -26,29 +29,16 @@ if(isset($_POST['submit'])){
     if (!$db){
     die("<br/>Connection error: " . mysqli_connect_error());
     }
-    $msg="incio";
-    $target=$_SERVER['DOCUMENT_ROOT']."/Nafisio/forum/uploaded_files/";
+    
     if(isset($_POST['submit'])){
-        $file_name=$_FILES['anexo']['name'];
-        $target=$target.$file_name;
-        $file_name="uploaded_files/".$file_name;
-        if (move_uploaded_file($_FILES['anexo']['tmp_name'], $target)){
-            $msg="movido com sucesso";
-        
-        }else{
-            $msg="alguma coisa deu errada,tmp_name:".$_FILES['anexo']['tmp_name']." target:".$target." size:".$_FILES['pdf_file']['size'];
-          
-        }
-        if(!empty($_POST['titulo']) && !empty($_POST['descricao']) && !empty($_POST['texto'])){
+        if(!empty($_POST['topico']) && !empty($_POST['descricao']) && !empty($_POST['texto'])){
             
-            $titulo=$_POST['titulo'];
-            $descricao=$_POST['descricao'];
-            $query="INSERT INTO Discussoes (id,titulo,descricao,comentarios,locked,alert,ultima_postagem,username,file_name) VALUES ('0','$titulo','$descricao','0','0','0',NOW(),'$username','$file_name')";
+            $titulo=$_POST['topico'];
+            $query="INSERT INTO Discussoes (id,titulo,topicos,comentarios,locked,alert,ultima_postagem,username) VALUES ('0','$titulo','0','0','0','0',NOW(),'$username')";
             $result=mysqli_query($db,$query);     
 
             
         }else{
-            echo '<a href="'.$file_name.'" download="">Download here</a>';
             echo "ERRO COISA VAZIA";
         }    
     }
@@ -77,7 +67,7 @@ if(isset($_POST['submit'])){
         <link href="/Nafisio/css/forum_style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <a href="#" download=""></a>
+        
         <div id="menu-left">
             <ul >
                 <li><img style="margin:0;width: 80px;height: 83px;float: none;" src="images/symbol-icon-nafisio.png" alt="nafisio icon"></li>
@@ -95,11 +85,7 @@ if(isset($_POST['submit'])){
             </ul>               
         </div>
         <div id="header">
-            <div class="header-icon">
-                <a href="../login/logout.php">
-                    <img src="images/sair-icon.png" alt="sair icon">Sair
-                </a>
-                </div>
+            <a href="../login/logout.php"><div id="logout"><img src="images/sair-icon.png" alt="sair icon">Sair</div></a>
             <div id="search-bar"> 
                 <input type="text" name="search-bar" placeholder="" >
             </div>
@@ -114,96 +100,33 @@ if(isset($_POST['submit'])){
             <div class="header-icon">
                 <img src="images/minhaconta-icon.png" alt=""/>Minha Conta
             </div>
-            <!-- <div id="title">Fórum</div> -->
-            <h1>Fórum</h1>
+            <div id="title">Fórum</div>
         </div>
         <div id="topic">
-            <div class="table-header">Alert </div>
-            <div class="table-header">Lock Icon</div>
-            <div class="table-header">Ultimas Postagens</div>
-            <div class="table-header">Comentarios</div>
-            
-            <div class="table-header" id="table-header-left">
-                   Tópicos <img src="images/discussoes-icon.png" alt="discussoes icon"/>
-            </div>
-            
-            <div class="table-header" id="table-header-left">
-                    Criar<a href="criar_topico.php"><img src="images/criar-icon.png" alt="criar icon"/></a>
-            </div >
-            
-            <div class="table-header" id="table-header-left">
-                    Editar<img src="images/editar-icon.png" alt="editar icon"/>
-            </div>
+            <table >                
+                <thead >
+                <th id="discussoes-th">
                     
-            <div class="table-header" id="table-header-left">
-                    Deletar<img src="images/deletar-icon.png" alt="deletar icon"/>
-            </div>
-
-        </div>                    
-        <table id="topic-table">
-            <tbody >
-                <?php
-                    while($row= mysqli_fetch_array($result)){
-                        //aplicar estilos diferentes entre cada row
-                        //ADD STYLE IN <tr>
-                        if($counter%2==0){
-                            echo '<tr >';
-                            //verifica se tem notificaçoes                           
-                            if($row[alert])
-                                 echo '<td><img style="width:15px;height:15px;" src="images/alertbell-icon.png" alt="alert icon"></td>';
-                            else
-                                echo "<td></td>";
-                            //verifica se esta fechado
-                            if($row['locked'])
-                                echo '<td><img style="width:15px;height:15px;" src="images/locked-icon.png" alt="locked icon"></td>';
-                            else
-                                echo '<td><img style="width:15px;height:15px;" src="images/unlocked-icon.png" alt="locked icon"></td>';
-                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']." por ".$row['username']."</td>";
-                            echo "<td>".$row['comentarios']."</td>";
-                            echo '<td id="topic-cell" >'.
-                                    '<a href="topicos.php?id=1&titulo=2">'.
-                                        '<p id="table-cell-title">'.
-                                            $row['titulo'].
-                                        '</p>'.
-                                    "</a>".
-                                 "</td>";
-                            //close line
-                            echo "</tr>";
-                        }else{
-                           echo '<tr >';
-                            //verifica se tem notificaçoes                           
-                            if($row[alert])
-                                 echo '<td><img style="width:15px;height:15px;" src="images/alertbell-icon.png" alt="alert icon"></td>';
-                            else
-                                echo "<td></td>";
-                            //verifica se esta fechado
-                            if($row['locked'])
-                                echo '<td><img style="width:15px;height:15px;" src="images/locked-icon.png" alt="locked icon"></td>';
-                            else
-                                echo '<td><img style="width:15px;height:15px;" src="images/unlocked-icon.png" alt="locked icon"></td>';
-                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']." por ".$row['username']."</td>";
-                            echo "<td>".$row['comentarios']."</td>";
-                            echo '<td id="topic-cell" >'.
-                                    '<a href="topicos.php?id=1&titulo=2">'.
-                                        '<p id="table-cell-title">'.
-                                            $row['titulo'].
-                                        '</p>'.
-                                    "</a>".
-                                 "</td>";
-                            //close line
-                            echo "</tr>";
-                        }
-                        $counter=$counter+1;
-                    }
-                    ?>
+                    <div class="table-header">
+                        Deletar<img src="images/deletar-icon.png" alt="deletar icon"/>
+                    </div>
+                    <div class="table-header">
+                        Editar<img src="images/editar-icon.png" alt="editar icon"/>
+                    </div>
+                    <div class="table-header">
+                        Criar<a href="<?php echo $_SERVER['PHP_SELF'].'?button=criar'?>"><img src="images/criar-icon.png" alt="criar icon"/></a>
+                    </div >                
+                    <div class="table-header" style="margin-right:0;float: left;">
+                       Discussões <img src="images/discussoes-icon.png" alt="discussoes icon"/>
+                    </div> 
+                </th>
+                <th>Tópicos</th>
+                <th>Comentários</th>
+                <th>Últimas Postagens</th>
+                <th>lock icon</th>
+                <th>alert</th>
+                </thead>
                 
-                
-            </tbody>
-                
-        </table>
-            <!--
-            <table id="table-topicos">                
-                            
                 <tbody>
                    <?php
                     while($row= mysqli_fetch_array($result)){
@@ -258,7 +181,6 @@ if(isset($_POST['submit'])){
                     }
                     ?>
             </table>
-            -->
             <?php
             if(isset($_GET['button'])){
                 if($_GET['button']=="criar"){ ?>
@@ -321,6 +243,5 @@ if(isset($_POST['submit'])){
             <input type="submit" name="submit" id="submit">
             <img src="<?php echo $file_name ?>" style="width: 400px;height: 250px;" alt="target image"> 
             <a href="<?php echo $file_name ?>" download="">Download Here</a>
-            
         </form>
         -->
