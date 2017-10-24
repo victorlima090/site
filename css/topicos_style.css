@@ -5,6 +5,7 @@ body{
     background-image:url('../images/images_forum/forum-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
     
     
     
@@ -59,11 +60,14 @@ body{
     
     height: 46.6px;
 }
+#topic-header{
+    height: 46.6px;
+}
 #form-body, #form-body textarea{
     margin:0;
     padding: 0;
     width: 742px;
-    height: 342px;
+    height: 100px;
     background-color: transparent;
     color:#4f9ab3;
     font-size: 14pt;
@@ -73,6 +77,12 @@ body{
 #form-footer{
     
     height: 46.6px;
+}
+#topic-footer{
+     width: 744px;
+    margin-left: 70px;
+    float: left;
+    height: 24.6px;
 }
 .form-footer-icon {
     float: left;
@@ -116,20 +126,81 @@ body{
     margin: 0;
     padding: 0;
     width: 120px;
+    margin-top: 7px;
 }
+#topic-title{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    margin-top: 7px;
+}
+
+
 .form-header-left {
     margin: 0;
     padding: 0;
-    width: 40px;
+    width: 50px;
     text-align: center;
     height: 46.6px;
     float: right;
-    font-size: 8pt;
+    font-size: 10pt;
     color: #4f9ab3;
 }
 .form-header-left img{
-    width: 23.5px;
-    height: 17.5px;
+    width: 30.5px;
+    height: 28.5px;
+}
+.topic-header-left{
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    text-align: center;
+    height: 46.6px;
+    float: right;
+    font-size: 10pt;
+    color: #4f9ab3;
+    
+}
+.topic-header-left > div{
+    display: none;
+}
+.topic-header-left img{
+    width: 30.5px;
+    height: 28.5px;
+    cursor: pointer;
+}
+#add-resposta{
+    
+    margin: 0;
+    width: 814px;
+    margin-left: 86px;
+    opacity: 1;
+    font-size: 14pt;
+    padding: 10px 15px;
+    background-color:  transparent;
+    height: 85px;
+}
+#add-resposta form{
+    width: 814px;
+}
+#add-resposta textarea{
+    
+    background-color: #ffffff;
+    opacity: 0.8;
+    width: 734px;
+    height: 50px;
+    
+    margin: 0;
+}
+#responder-button{
+    width: 35.5px;
+    height: 30.5px;
+    background-image: url('../forum/images/voltar-icon.png');
+    background-size: cover;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
 }
 #publicar-button{
     width: 23.5px;
@@ -153,6 +224,21 @@ body{
     margin-left: 86px;
     padding: 10px 15px;
 }
+#show-topic{
+    
+    width: 814px;
+    margin-left: 86px;
+    padding: 10px 15px;
+    
+}
+.show-resposta{
+    margin: 10px 0;
+    width: 814px;
+    height: 120px;
+    max-height: 100%;
+    margin-left: 86px;
+    padding: 10px 15px;
+}
 #header-forum{
     float: left;
     font-size:22pt;
@@ -166,9 +252,34 @@ body{
     height: 46.6px;
     float: left;
     margin: 0;
-    margin-left: 15px;
+    margin-left: 0;
     margin-right: 5px;
     padding: 0;
+}
+#topic-user-img{
+    
+    width: 70px;
+    height: 55px;
+    float: left;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0;
+}
+.resposta-user{
+   
+    font-size: 10pt;
+    width: 70px;
+    height: 65px;
+    float: left;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0; 
+}
+.resposta-user img{
+     width: 70px;
+    height: 55px;
 }
 #header h1{
     margin: 0;
@@ -183,6 +294,32 @@ body{
     color: #ffffff;
     
     
+    
+}
+#topic-text{
+    height: 100px;
+    width: 744px;
+    margin: 0;
+    margin-left: 70px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    font-size: 14pt;
+}
+#topic-text p{
+    margin:0;
+    height: 100px;
+}
+.respota-text{
+    margin: 0;
+    width: 744px;
+    margin-left: 75px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    font-size: 14pt;
+}
+.respota-text p{
+    height: 100px;
+    margin:0;
     
 }
 #td-ultima-postagem{
@@ -293,10 +430,8 @@ table{
 
 a{
     text-decoration: none;
-}
-a:hover {
-	
-	
+    color: inherit;
+    
 }
 
 .footer {

@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 ?>
 
@@ -52,8 +53,9 @@
             <div class="header-icon">
                 <img src="images/minhaconta-icon.png" alt=""/>Minha Conta
             </div>
-            
-            <h1>Fórum>Criar>Titulo1</h1>
+            <div id="header-forum">
+                Fórum>Criar>Título
+            </div>
         </div>
         <div id="topic">
                       
@@ -81,7 +83,8 @@
             <form  enctype="multipart/form-data" method="post" action="index_forum.php" id="form">
                 <div id="form-header">
                     <div id="input-text-box">
-                        <input type="text" name="titutlo" placeholder="Titulo 1" id="titulo-input">
+                        <input type="hidden" name="username" value="<?php echo $_SESSION['username']?>">
+                        <input type="text" name="titulo" placeholder="Titulo 1" id="titulo-input">
                         <input type="text" name="descricao" placeholder="Adicionar uma descrição" id="descricao-input">
                     </div>
                     

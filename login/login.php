@@ -73,7 +73,7 @@ if(!isset($_SESSION['user'])){
                 <ul id="navbar">
                     <li><a href="#">QUEM SOMOS</a></li>
                     <li><a href="#">A TUTORIA</a></li>
-                    <li><a href="#">PORTAL DO PROFESSOR</a></li>
+                    <li><a href="../forum/index_forum.php">PORTAL DO PROFESSOR</a></li>
                     <li><a href="#">PORTAL DO ALUNO</a></li>
                     <li><a href="#">AJUDA</a></li>                      
                 </ul>                                
@@ -96,13 +96,13 @@ if(!isset($_SESSION['user'])){
                     <?php if(empty($_SESSION['user'])){
                     echo "$error_msg";                
                     ?>
-                    <input type="text" name="user" value="Username">
+                    <input type="text" name="user" placeholder="Username">
                     <br/>
-                    <input type="password" name="pw" value="Password">
+                    <input type="password" name="pw" placeholder="Password">
                     <input id="submit-box" type="submit" name="Submit" value="Entrar" >
                     <p style="color:yellow; font-size:10pt;float: left;padding: 0; font-style: italic;">
                         Esqueceu sua senha?</p>
-                    <a href="cadastro.php"><img id="cadastrar-icon" src="/Nafisio/images/images_login/cadastrar-icon_1.png" alt=""/></a>
+                    <a href="/Nafisio/login/cadastro.php"><img id="cadastrar-icon" src="/Nafisio/images/images_login/cadastrar-icon_1.png" alt=""/></a>
                     
                 </form>
                     <?php }                             

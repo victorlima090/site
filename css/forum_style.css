@@ -63,7 +63,7 @@ body{
     line-height: 83px;
 }
 #topic{
-    
+    margin-top: 5px;
     height: 40px;
     background-color: #0f7397;
     padding: 0;
@@ -73,6 +73,11 @@ body{
     
 }
 #td-ultima-postagem{
+    text-align: center;
+    padding: 0;
+    height:70px;
+    font-size: 12pt;
+    
     width: 118px;
 }
 #logout{
@@ -100,6 +105,14 @@ body{
     text-align: center;
     color: #066571;
     width: 85px;
+    
+}
+#header-forum{
+    float: left;
+    font-size:22pt;
+    color: #066571;
+    line-height: 80px;
+    
     
 }
 .header-icon img{
@@ -135,6 +148,7 @@ td{
     
 }
 tr{
+    
     height: 60px;
 }
 #table-cell-title{
@@ -190,6 +204,7 @@ a{
     padding: 0;
     float: none;
     text-decoration: none;
+    color: inherit;
 }
 a:hover {
 	

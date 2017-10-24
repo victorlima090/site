@@ -39,18 +39,17 @@ if(isset($_POST['submit'])){
             $msg="alguma coisa deu errada,tmp_name:".$_FILES['anexo']['tmp_name']." target:".$target." size:".$_FILES['pdf_file']['size'];
           
         }
-        if(!empty($_POST['titulo']) && !empty($_POST['descricao']) && !empty($_POST['texto'])){
-            
-            $titulo=$_POST['titulo'];
-            $descricao=$_POST['descricao'];
-            $query="INSERT INTO Discussoes (id,titulo,descricao,comentarios,locked,alert,ultima_postagem,username,file_name) VALUES ('0','$titulo','$descricao','0','0','0',NOW(),'$username','$file_name')";
-            $result=mysqli_query($db,$query);     
+        
+        $username=$_POST['username'];
+        $titulo=$_POST['titulo'];
+        $descricao=$_POST['descricao'];
+        $texto=$_POST['texto'];
+        $query="INSERT INTO Discussoes (id,titulo,descricao,texto,comentarios,locked,alert,ultima_postagem,username,file_name)"
+                . " VALUES ('0','$titulo','$descricao','$texto','0','0','0',NOW(),'$username','$file_name')";
+        $result=mysqli_query($db,$query);     
 
             
-        }else{
-            echo '<a href="'.$file_name.'" download="">Download here</a>';
-            echo "ERRO COISA VAZIA";
-        }    
+           
     }
 
     /*POR ENQUANTO SEM NENHUM SUBMIT BUTTON
@@ -115,7 +114,9 @@ if(isset($_POST['submit'])){
                 <img src="images/minhaconta-icon.png" alt=""/>Minha Conta
             </div>
             <!-- <div id="title">Fórum</div> -->
-            <h1>Fórum</h1>
+            <div id="header-forum">
+                Fórum
+            </div>
         </div>
         <div id="topic">
             <div class="table-header">Alert </div>
@@ -126,11 +127,11 @@ if(isset($_POST['submit'])){
             <div class="table-header" id="table-header-left">
                    Tópicos <img src="images/discussoes-icon.png" alt="discussoes icon"/>
             </div>
-            
+            <a href="criar_topico.php">
             <div class="table-header" id="table-header-left">
-                    Criar<a href="criar_topico.php"><img src="images/criar-icon.png" alt="criar icon"/></a>
+                    Criar<img src="images/criar-icon.png" alt="criar icon"/>
             </div >
-            
+            </a>
             <div class="table-header" id="table-header-left">
                     Editar<img src="images/editar-icon.png" alt="editar icon"/>
             </div>
@@ -158,10 +159,10 @@ if(isset($_POST['submit'])){
                                 echo '<td><img style="width:15px;height:15px;" src="images/locked-icon.png" alt="locked icon"></td>';
                             else
                                 echo '<td><img style="width:15px;height:15px;" src="images/unlocked-icon.png" alt="locked icon"></td>';
-                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']." por ".$row['username']."</td>";
+                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']."</td>";
                             echo "<td>".$row['comentarios']."</td>";
                             echo '<td id="topic-cell" >'.
-                                    '<a href="topicos.php?id=1&titulo=2">'.
+                                    '<a href="topicos.php?id='.$row['id'].'">'.
                                         '<p id="table-cell-title">'.
                                             $row['titulo'].
                                         '</p>'.
@@ -181,10 +182,10 @@ if(isset($_POST['submit'])){
                                 echo '<td><img style="width:15px;height:15px;" src="images/locked-icon.png" alt="locked icon"></td>';
                             else
                                 echo '<td><img style="width:15px;height:15px;" src="images/unlocked-icon.png" alt="locked icon"></td>';
-                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']." por ".$row['username']."</td>";
+                            echo '<td id="td-ultima-postagem">'.$row['ultima_postagem']."</td>";
                             echo "<td>".$row['comentarios']."</td>";
                             echo '<td id="topic-cell" >'.
-                                    '<a href="topicos.php?id=1&titulo=2">'.
+                                    '<a href="topicos.php?id='.$row['id'].'">'.
                                         '<p id="table-cell-title">'.
                                             $row['titulo'].
                                         '</p>'.
