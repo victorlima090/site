@@ -4,31 +4,31 @@ session_start();
     //Inicializa counter
     $counter=1;    
     //Conecta com banco de dados
-    $db = mysqli_connect(DBHOST, DBUSER, DBPW, 'Nafisio');
+    $db = mysqli_connect(DBHOST, DBUSER, DBPW, 'nafisio');
     if (!$db){
     die("<br/>Connection error: " . mysqli_connect_error());
     }
     if(isset($_GET['id'])){
         $id_topico=$_GET['id'];
-        echo $id_topico;
-        $query="SELECT * FROM Discussoes WHERE id=".$id_topico;
+       
+        $query="SELECT * FROM discussoes WHERE id=".$id_topico;
         $result= mysqli_query($db, $query);
         $row= mysqli_fetch_array($result);
     }
     if(isset($_POST['submit'])){
         $id_topico=$_POST['id_topico'];
-        echo "esse e ".$id_topico;
+       
         
         $username=$_POST['username'];
         $resposta=$_POST['resposta'];
-        $query="INSERT INTO Resposta (id_topico,id,resposta,username,data) VALUES ('$id_topico','0','$resposta',"
+        $query="INSERT INTO respostas (id_topico,id,resposta,username,data) VALUES ('$id_topico','0','$resposta',"
                 . "'$username',NOW())";  
         $result= mysqli_query($db, $query);
         
-        $query="SELECT * FROM Discussoes WHERE id=".$id_topico;
+        $query="SELECT * FROM discussoes WHERE id=".$id_topico;
         $result= mysqli_query($db, $query);
         $row= mysqli_fetch_array($result);
-        echo $row['titulo'];
+        
     }
     
     
@@ -41,7 +41,7 @@ session_start();
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Nafisio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/Nafisio/css/topicos_style.css" rel="stylesheet" type="text/css"/>
@@ -51,7 +51,7 @@ session_start();
         
         <div id="menu-left">
             <ul >
-                <li><img style="margin:0;width: 80px;height: 83px;float: none;" src="images/symbol-icon-nafisio.png" alt="nafisio icon"></li>
+                <a href="../index.html"><li><img style="margin:0;width: 80px;height: 83px;float: none;" src="images/symbol-icon-nafisio.png" alt="nafisio icon"></li></a>
                 <li>  <img src="images/tutoria-icon.png" alt="tutoria icon"/><p>Tutoria</p> </li>
                 
                 <li style="background-color: #3dd3d3;opacity: 0.55;"> <img src="images/forum-icon.png" alt="forum icon"><p>Forum</p></li>                
@@ -86,7 +86,7 @@ session_start();
                 <img src="images/minhaconta-icon.png" alt=""/>Minha Conta
             </div>
             <div id="header-forum">
-                Fórum>Título1
+                Fórum><?php echo $row['titulo'] ?>
             </div>
         </div>
         <div id="topic">
@@ -114,7 +114,7 @@ session_start();
         <div id="show-topic">
             <div class="resposta-user">
                 <img id="topic-user-img" src="images/minhaconta-icon.png" alt="user icon">Postado por 
-                <?php echo $row['username']." em ".$row['data'] ?>
+                <?php echo $row['username']." em ".$row['ultima_postagem'] ?>
             </div>
             
             <div id="topic-header">
@@ -144,7 +144,7 @@ session_start();
             
         </div>
         <?php 
-        $query="SELECT * FROM Resposta WHERE id_topico='$id_topico' ORDER BY id ASC";
+        $query="SELECT * FROM respostas WHERE id_topico='$id_topico' ORDER BY id ASC";
         $result= mysqli_query($db, $query);
         while($row= mysqli_fetch_array($result)){
             

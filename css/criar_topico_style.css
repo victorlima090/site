@@ -98,7 +98,7 @@ body{
     font-size: 14pt;
     margin: 0;
     float: left;
-    width: 100px;
+    width: 520px;
     float: left;
     background-color: transparent;
 }
@@ -106,7 +106,7 @@ body{
     border: none;
     font-size: 8pt;
     margin: 0;
-    width: 120.8px;
+    width: 520px;
     height: 13px;
     float: left;
     background-color: transparent;
@@ -115,7 +115,7 @@ body{
     float: left;
     margin: 0;
     padding: 0;
-    width: 120px;
+    width: 520px;
 }
 .form-header-left {
     margin: 0;

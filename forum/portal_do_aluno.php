@@ -114,13 +114,6 @@
                     Criar<img src="images/criar-icon.png" alt="criar icon"/>
             </div >
             </a>
-            <div class="table-header" id="table-header-left">
-                    Editar<img src="images/editar-icon.png" alt="editar icon"/>
-            </div>
-                    
-            <div class="table-header" id="table-header-left">
-                    Deletar<img src="images/deletar-icon.png" alt="deletar icon"/>
-            </div>
 
         </div>                    
         <table id="topic-table">

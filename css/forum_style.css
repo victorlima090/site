@@ -75,9 +75,9 @@ body{
 #td-ultima-postagem{
     text-align: center;
     padding: 0;
-    height:70px;
+    height:50px;
     font-size: 12pt;
-    
+    line-height: 50px;
     width: 118px;
 }
 #logout{
@@ -152,14 +152,16 @@ tr{
     height: 60px;
 }
 #table-cell-title{
+    text-align: left;
+    width:700px;
     height: 40px;
     margin: 0;
-    
-    font-size:16pt;
+    font-size:18pt;
     color: #528918;
     
 }
 #table-header-left,#topic-cell {
+    width:400px;
     height: inherit;
     float: left;
     
@@ -184,7 +186,9 @@ th{
     font-weight: normal
 }
 table{
-    width:910px;
+    margin: 0;
+    padding: 0 10px;
+    width:900px;
     max-width: 100%;
     border: 1px solid #CCC;
     border-collapse: collapse;

@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Nafisio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/Nafisio/css/cadastro_style.css" rel="stylesheet" type="text/css">
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
                 
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
                     <?php if (!empty($erro_msg)) echo $erro_msg."<br/>";?>
-                    <label class="login-label">Username</label>
+                    <label class="login-label">Usuário</label>
                     <input type="text" name="user">
                     <br/>
                     <label class="login-label">Password</label>

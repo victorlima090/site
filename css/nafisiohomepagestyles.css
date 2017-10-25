@@ -104,7 +104,7 @@ display: block; /*img behaves like block*/
 	
 }
 p{
-        color:blue;
+
 	font-size: 1em;
 	line-height: 1.7em;
 	padding-top: 0px;
@@ -134,6 +134,10 @@ p{
 	list-style: none;
         background-color:green;
         
+}
+#welcome-text{
+    font-size:20pt;
+    color: #163133;
 }
 #login{
     background-image: url('/Nafisio/images/icon-acessar.png');
@@ -177,7 +181,7 @@ p{
     height: 236px;
     background-color: #ffffff;
     opacity: 0.6;
-    color:#2f524c;
+    color:#163133;
     font-family: sailors slant;
     font-size:20pt;
     
@@ -234,18 +238,22 @@ a:hover {
 	text-decoration: underline;
 }
 
+
 .footer {
-        position:absolute;
+        position:fixed;
         bottom:0;
         width:100%;
 	background-color: #324555;
 	padding: 0;
+    height: 20px;
 }
 .footer p {
 	font-size: .8em;
 	color: #8eb8ce;
-	padding: .2em 0 .2em 15px;
+padding: .2em 0 .2em 15px;
+    margin: 0;
 }
+
 header img {
 	border: 0;
 	margin-top: 0px;
