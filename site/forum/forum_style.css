@@ -1,0 +1,99 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url('images/forum-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+a {
+	text-decoration: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	/*color: #360;*/
+	color:#dae2e3;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+.footer {
+        position:absolute;
+        bottom:0;
+        width:100%;
+	background-color: #324555;
+	padding: 0;
+}
+.footer p {
+	font-size: .8em;
+	color: #8eb8ce;
+	padding: .2em 0 .2em 15px;
+}
+
+.flex-holder {
+       padding-top: 1.5em;
+     /* We first create a flex layout context */
+     display: flex;
+     /* Then we define the flow direction and if we allow the items to
+   wrap
+      * Remember this is shorthand for:
+      * flex-direction: row;
+      * flex-wrap: wrap;
+      */
+     flex-flow: row wrap;
+     /* Then we define how is distributed the remaining space */
+     justify-content: space-around;
+}
+flex-holder li {
+       width: 300px;
+       height: 230px;
+       margin: 0 0 30px 0;
+       padding: 0
+}
+.flex-holder li a, .flex-holder li a:visited
+   {
+       display: block
+   }
+.flex-holder p {
+padding: .5em 0 0 0; 
+       text-align: center;
+}
+.flex-holder img {
+margin: 0; 
+   }
+   .header-banner {
+	
+}
+
+
+
+@media screen and (min-width:767px){
+h1 {
+	width: 66%;
+	float: left;
+	margin-top: .5em;
+    padding-bottom: 9em; 
+}
+
+header {
+	overflow: hidden;
+}
+ header img {
+      width: 22.375%;
+      float: right;
+      margin: 1.5em 0 0 0;
+      padding: 0 1.75em 0 0;
+}
+h2 {
+	padding-top: 24px;
+}
+
+.header-banner {
+	max-width: 60em;
+}
+}
+
+
+

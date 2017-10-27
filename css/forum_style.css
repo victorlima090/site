@@ -1,0 +1,292 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url('../images/images_forum/forum-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+#menu-left{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 86px;
+    height: 732px;
+    max-height: 100%;
+    background-color: #066571;
+    color:#ffffff;
+    font-size: 10pt;
+    font-family: Futura Medium;
+    text-align: center;
+    font-weight: bold;
+}
+#menu-left ul{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu-left ul li{
+    float: inside;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-left ul img{
+    width: 41px;
+    height: 43px;
+    margin: 10px 20px;
+    padding: 0 ;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+#menu-left p{
+    margin:0;
+    padding: 0;
+}
+#header,#topic,#topic-table{
+    border: none;
+    width: 91.6%;/*938px;*/
+    max-width: 100%;
+    height: 83px;
+    margin: 0;
+    margin-left: 86px;
+    padding: 10px 15px;
+}
+#header h1{
+    margin: 0;
+    padding: auto 0;
+    line-height: 83px;
+}
+#topic{
+    margin-top: 5px;
+    height: 40px;
+    background-color: #0f7397;
+    padding: 0;
+    color: #ffffff;
+    
+    
+    
+}
+#td-ultima-postagem{
+    text-align: center;
+    padding: 0;
+    height:50px;
+    font-size: 12pt;
+    line-height: 50px;
+    width: 118px;
+}
+#logout{
+    margin: 10px;
+    float: right;
+    font-size: 12pt;
+    text-align: center;
+    color: #066571;
+    width: 65px;
+}
+#logout img{
+    width: 65px;
+    height: 65px;
+}
+#search-bar{
+    float: right ;
+    width: 150px;
+    height: 20px;
+    margin: 30px 40px;
+}
+.header-icon{
+    float: right;
+    margin: 0 10px;
+    font-size: 12pt;
+    text-align: center;
+    color: #066571;
+    width: 85px;
+    
+}
+#header-forum{
+    float: left;
+    font-size:22pt;
+    color: #066571;
+    line-height: 80px;
+    
+    
+}
+.header-icon img{
+    
+    width: 65px;
+    height: 65px;
+}
+#title{
+    font-size: 40pt;
+    float: left;
+    color: #066571;
+    height: 40px;
+    margin: 15px 10px;
+    
+}
+.table-header,td{
+    height: inherit;/*igual o do #topic */
+    float: right;
+    margin: 0 10px;
+    max-width: 120px;
+    text-align: center;
+    min-width: 80px;
+    padding: 0;
+    padding-top: 10px;
+    
+}
+td{
+    color:#0f7397;
+    font-size: 12pt;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    
+}
+tr{
+    
+    height: 60px;
+}
+#table-cell-title{
+    text-align: left;
+    width:700px;
+    height: 40px;
+    margin: 0;
+    font-size:18pt;
+    color: #528918;
+    
+}
+#table-header-left,#topic-cell {
+    width:400px;
+    height: inherit;
+    float: left;
+    
+}
+
+.table-header img{
+    height:20px;
+    width: 25px;
+    
+}
+thead{
+  
+    background-color: #066571;
+}
+tbody{
+    text-align: center;
+}
+th{
+    color:#ffffff;
+    font-size: 14pt;
+    height: 40px;
+    font-weight: normal
+}
+table{
+    margin: 0;
+    padding: 0 10px;
+    width:900px;
+    max-width: 100%;
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    
+}
+
+.tr1,.tr2{
+    
+}
+.tr1{
+}
+.tr2{
+    
+}
+a{
+    margin: 0;
+    padding: 0;
+    float: none;
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+	
+	text-decoration: underline;
+}
+
+.footer {
+        position:fixed;
+        bottom:0;
+        width:100%;
+	background-color: #324555;
+	padding: 0;
+    height: 20px;
+}
+.footer p {
+	font-size: .8em;
+	color: #8eb8ce;
+padding: .2em 0 .2em 15px;
+    margin: 0;
+}
+
+.flex-holder {
+       padding-top: 1.5em;
+     /* We first create a flex layout context */
+     display: flex;
+     /* Then we define the flow direction and if we allow the items to
+   wrap
+      * Remember this is shorthand for:
+      * flex-direction: row;
+      * flex-wrap: wrap;
+      */
+     flex-flow: row wrap;
+     /* Then we define how is distributed the remaining space */
+     justify-content: space-around;
+}
+flex-holder li {
+       width: 300px;
+       height: 230px;
+       margin: 0 0 30px 0;
+       padding: 0
+}
+.flex-holder li a, .flex-holder li a:visited
+   {
+       display: block
+   }
+.flex-holder p {
+padding: .5em 0 0 0; 
+       text-align: center;
+}
+.flex-holder img {
+margin: 0; 
+   }
+   .header-banner {
+	
+}
+
+
+
+@media screen and (min-width:767px){
+
+
+header {
+	overflow: hidden;
+}
+ header img {
+      width: 22.375%;
+      float: right;
+      margin: 1.5em 0 0 0;
+      padding: 0 1.75em 0 0;
+}
+h2 {
+	padding-top: 24px;
+}
+
+.header-banner {
+	max-width: 60em;
+}
+}
+
+
+

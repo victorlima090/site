@@ -1,0 +1,340 @@
+@charset "UTF-8";
+body{font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 300;
+
+ 
+        background-repeat: no-repeat;
+	background-size: cover;
+        background-image: url('images/header-banner.png.jpg')
+}
+#menu-left{
+    height: 100%;
+    margin: 10px 0;
+    
+   float: left;
+    overflow: hidden;
+    overflow-y: hidden;
+    list-style: none;
+}
+#menu-left img{
+    
+    width: 77px;
+    height: 70px;
+    border: none;
+    margin: 45px 0;
+}
+#menu-right{
+   float: right;
+    text-align: left;
+    margin: 0;
+    margin-top:10px;
+    padding: 0;
+    width: 222px;
+    height: 100%;
+    color:yellow;
+}
+
+#center{
+    width: 350px;
+    height: 534px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    float: left;
+    margin: 0 auto;
+    margin-left: 100px;
+    padding: 0;
+    text-align: center;
+}
+#icon-center {
+    width: 350px;
+    height: 514px;
+}
+
+#cadastrar-icon {
+width: 100px;
+height: 100px;
+margin: 40px;
+float: none;
+}
+#menu-right label,input{
+    
+    margin:10px 0;
+    padding: 10px 0;
+}
+#container{
+    
+        overflow: hidden;
+        width: 100%;
+      	max-width: 100%;        
+	margin:0 ;
+        margin-bottom: 15px;
+        height: 70px;
+        margin-top: 10px;
+        padding: 0;
+        float:none;
+	/*background-color: #F3F3F3;*/
+	
+}
+#navbar ul {
+   list-style: none;
+   width: 10%;
+   float:right ;
+   display: block;
+   overflow: hidden;
+}
+#navbar ul li{
+    overflow:hidden;
+    padding: 0 10px;
+    float:right;
+}
+
+#container .header-banner{
+        
+
+        text-align: center;
+        width: 622px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+p{
+        color:blue;
+	font-size: 1em;
+	line-height: 1.7em;
+	padding-top: 0px;
+	padding-right: 30px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	bottom: auto;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.login_container{
+    float: none;        
+    margin:0 auto  ;
+    width: 825px;
+    height: 514px;    
+    padding:0;
+    background-origin: content-box;
+    background-color: #22435c;
+    
+    list-style: none;
+    
+}
+
+.login-label{
+    margin: 0;
+    padding: 0;
+}
+
+
+#login{
+    background-image: url('images/icon-acessar.png');
+    display: block;
+    width: 981px;
+  height: 180px;
+  background-repeat: no-repeat;
+}
+#home-bg{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+#home-bg img{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+#logo{
+    border: none;
+    width:350px;
+    height: 534px;
+    opacity: 0.6;
+    background-color:#ffffff;
+    
+}
+#welcome{
+    
+    border: none;
+    position: absolute;
+    top : 40%;
+    left:20%;
+    width:937px;
+    height: 186px;
+}
+#icon{
+    border:none;
+    position: absolute;
+    top: 70%;
+    left:80%;
+    width: 112px;
+    height: 117px;
+}
+
+form input{
+    width: 200px;
+    height:20px;
+    background-color: #b4d1da;
+    
+    
+}
+#submit-box{
+    width: 200px;
+    height: 40px;
+    font-size: 14pt;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    text-align: center;
+    vertical-align: center;
+    float: right;
+    border-style: groove;
+    border-radius: 5px;
+    
+}
+
+a {
+	text-decoration: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	/*color: #360;*/
+	color:#dae2e3;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+#navbar{
+   text-align: center;
+        position: static;
+        width: 622px;
+        height:50px;
+	max-width: 100%;
+	margin: 0 auto;
+        
+	padding: 20px 0 ;
+        
+	overflow: hidden;
+}
+#navbar li{
+           overflow: hidden;
+	line-height: 1.8em;
+	font-size: 1em;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	width: auto;
+	display: inline;
+	padding: 0 0.25em;
+}
+#navbar li:last-child {
+	padding-right: .5em;
+}
+#navbar li a {
+	font-size: 0.91em;
+	/*color: #360;*/
+	color: #dae2e3;
+	text-decoration: none;
+}
+#navbar li a:hover, a:focus {
+	color: #333;
+	text-decoration: none;
+}
+.flex-holder {
+       padding-top: 1.5em;
+     /* We first create a flex layout context */
+     display: flex;
+     /* Then we define the flow direction and if we allow the items to
+   wrap
+      * Remember this is shorthand for:
+      * flex-direction: row;
+      * flex-wrap: wrap;
+      */
+     flex-flow: row wrap;
+     /* Then we define how is distributed the remaining space */
+     justify-content: space-around;
+}
+flex-holder li {
+       width: 300px;
+       height: 230px;
+       margin: 0 0 30px 0;
+       padding: 0
+}
+.flex-holder li a, .flex-holder li a:visited
+   {
+       display: block
+   }
+.flex-holder p {
+padding: .5em 0 0 0; 
+       text-align: center;
+}
+.flex-holder img {
+margin: 0; 
+   }
+   .header-banner {
+	
+}
+
+.footer {
+        position:absolute;
+        bottom:0;
+        width:100%;
+	background-color: #324555;
+	padding: 0;
+}
+.footer p {
+	font-size: .8em;
+	color: #8eb8ce;
+	padding: .2em 0 .2em 15px;
+}
+header img {
+	border: 0;
+	margin-top: 0px;
+}
+@media screen and (min-width:767px){
+h1 {
+	width: 66%;
+	float: left;
+	margin-top: .5em;
+    padding-bottom: 9em; 
+}
+
+header {
+	overflow: hidden;
+}
+ header img {
+      width: 22.375%;
+      float: right;
+      margin: 1.5em 0 0 0;
+      padding: 0 1.75em 0 0;
+}
+h2 {
+	padding-top: 24px;
+}
+
+.header-banner {
+	max-width: 60em;
+}
+}
+
+
+
